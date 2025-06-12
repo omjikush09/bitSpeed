@@ -1,0 +1,1 @@
+ALTER TABLE "contacts_table" DROP COLUMN "name";

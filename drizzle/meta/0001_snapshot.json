@@ -1,0 +1,98 @@
+{
+  "id": "374773fa-6d1f-4a56-b569-936878d2a447",
+  "prevId": "2a98dfd1-a3a5-4427-940d-b340ad0e09af",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.contacts_table": {
+      "name": "contacts_table",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phone_number": {
+          "name": "phone_number",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "linkedId": {
+          "name": "linkedId",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "linkPrecedence": {
+          "name": "linkPrecedence",
+          "type": "link_precedence_enum",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updatedAt": {
+          "name": "updatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "delatedAt": {
+          "name": "delatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.link_precedence_enum": {
+      "name": "link_precedence_enum",
+      "schema": "public",
+      "values": [
+        "primary",
+        "secondary"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
